@@ -1,0 +1,19 @@
+{
+  "civ_name": "Persians",
+  "archery_range": {
+    "units": {
+      "archer": true,
+      "crossbowman": true,
+      "arbalest": false,
+      "skirmisher": true,
+      "elite_skirmisher": true,
+      "cavalry_archer": true,
+      "heavy_cavalry_archer": true,
+      "hand_cannoneer": true
+    },
+    "technologies": {
+      "thumb_ring": true,
+      "parthian_tactics": true
+    }
+  }
+}
