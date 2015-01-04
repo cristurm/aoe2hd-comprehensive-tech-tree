@@ -1,0 +1,51 @@
+{
+  "buildings": [
+    {
+      "name": "Archery Range",
+      "units": [
+        {
+          "id": "archer",
+          "name": "Archer"
+        },
+        {
+          "id": "crossbowman",
+          "name": "Crossbowman"
+        },
+        {
+          "id": "arbalest",
+          "name": "Arbalest"
+        },
+        {
+          "id": "skirmisher",
+          "name": "Skirmisher"
+        },
+        {
+          "id": "elite_skirmisher",
+          "name": "Elite Skirmisher"
+        },
+        {
+          "id": "cavalry_archer",
+          "name": "Cavalry Archer"
+        },
+        {
+          "id": "heavy_cavalry_archer",
+          "name": "Heavy Cavalry Archer"
+        },
+        {
+          "id": "hand_cannoneer",
+          "name": "Hand Cannoneer"
+        }
+      ],
+      "technologies": [
+        {
+          "id": "parthian_tactics",
+          "name": "Parthian Tactics"
+        },
+        {
+          "id": "thumb_ring",
+          "name": "Thumb Ring"
+        }
+      ]
+    }
+  ]
+}

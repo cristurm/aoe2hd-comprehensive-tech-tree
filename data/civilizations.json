@@ -1,46 +1,34 @@
 [
   {
+    "id": "celts",
     "name": "Celts",
-    "buildings": [
-      {
-        "name": "Archery Range",
-        "units": {
-          "archer": true,
-          "crossbowman": true,
-          "arbalest": false,
-          "skirmisher": true,
-          "elite_skirmisher": true,
-          "cavalry_archer": true,
-          "heavy_cavalry_archer": true,
-          "hand_cannoneer": false
-        },
-        "technologies": {
-          "thumb_ring": false,
-          "parthian_tactics": false
-        }
-      }
-    ]
+    "units_and_techs": {
+      "arbalest": false,
+      "archer": true,
+      "cavalry_archer": true,
+      "crossbowman": true,
+      "elite_skirmisher": true,
+      "hand_cannoneer": false,
+      "heavy_cavalry_archer": true,
+      "parthian_tactics": false,
+      "skirmisher": true,
+      "thumb_ring": false
+    }
   },
   {
+    "id": "persians",
     "name": "Persians",
-    "buildings": [
-      {
-        "name": "Archery Range",
-        "units": {
-          "archer": true,
-          "crossbowman": true,
-          "arbalest": false,
-          "skirmisher": true,
-          "elite_skirmisher": true,
-          "cavalry_archer": true,
-          "heavy_cavalry_archer": true,
-          "hand_cannoneer": true
-        },
-        "technologies": {
-          "thumb_ring": true,
-          "parthian_tactics": true
-        }
-      }
-    ]
+    "units_and_techs": {
+      "arbalest": false,
+      "archer": true,
+      "cavalry_archer": true,
+      "crossbowman": true,
+      "elite_skirmisher": true,
+      "hand_cannoneer": true,
+      "heavy_cavalry_archer": true,
+      "parthian_tactics": true,
+      "skirmisher": true,
+      "thumb_ring": true
+    }
   }
 ]
