@@ -24,12 +24,10 @@ var BuildingHeader = React.createClass({displayName: "BuildingHeader",
         React.createElement("tr", null, 
           React.createElement("th", {colSpan: unitAndTechCount}, building.name)
         ), 
-
         React.createElement("tr", null, 
           React.createElement("th", {colSpan: unitCount}, "Units"), 
           React.createElement("th", {colSpan: techCount}, "Technologies")
         ), 
-
         React.createElement("tr", null, 
           unitsAndTechsRows
         )

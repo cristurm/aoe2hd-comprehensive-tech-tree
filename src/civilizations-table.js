@@ -26,9 +26,12 @@ var CivTable = React.createClass({
 
     return (
       <table className="civilizations">
-        {tableHeader}
-
+        <div clasName="wtf-yeah-i-know">
+          {tableHeader}
+        </div>
+        <tbody>
           {civilizationNodes}
+        </tbody>
       </table>
     );
   }

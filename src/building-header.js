@@ -24,12 +24,10 @@ var BuildingHeader = React.createClass({
         <tr>
           <th colSpan={unitAndTechCount}>{building.name}</th>
         </tr>
-
         <tr>
           <th colSpan={unitCount}>Units</th>
           <th colSpan={techCount}>Technologies</th>
         </tr>
-
         <tr>
           {unitsAndTechsRows}
         </tr>

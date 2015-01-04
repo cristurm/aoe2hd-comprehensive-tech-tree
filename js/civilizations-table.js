@@ -26,9 +26,12 @@ var CivTable = React.createClass({displayName: "CivTable",
 
     return (
       React.createElement("table", {className: "civilizations"}, 
-        tableHeader, 
-
+        React.createElement("div", {clasName: "wtf-yeah-i-know"}, 
+          tableHeader
+        ), 
+        React.createElement("tbody", null, 
           civilizationNodes
+        )
       )
     );
   }
