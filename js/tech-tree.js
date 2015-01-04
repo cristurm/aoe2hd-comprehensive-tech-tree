@@ -1,33 +1,51 @@
 var AOE2HDTechTree = React.createClass({displayName: "AOE2HDTechTree",
   getInitialState: function() {
-    return {data: [{"name": "try random"}]};
+    return {
+      unitsAndTechs: {},
+      civilizations: []
+    };
   },
-  loadCommentsFromServer: function() {
+
+  loadData: function() {
+    var unitsAndTechs, civilizations;
+
     $.ajax({
-      url: this.props.url,
+      url: this.props.unitsAndTechsUrl,
       dataType: 'json',
-      success: function(data) {
-        this.setState({data: data});
+      success: function(_unitsAndTechs) {
+        this.setState({unitsAndTechs: _unitsAndTechs});
       }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
+      error: function(_xhr, _status, _err) {
+        console.error(this.props.unitsAndTechsUrl, _status, _err.toString());
+      }.bind(this)
+    });
+
+    $.ajax({
+      url: this.props.civsUrl,
+      dataType: 'json',
+      success: function(_civilizations) {
+        this.setState({civilizations: _civilizations});
+      }.bind(this),
+      error: function(_xhr, _status, _err) {
+        console.error(this.props.civsUrl, _status, _err.toString());
       }.bind(this)
     });
   },
+
   componentDidMount: function() {
-    this.loadCommentsFromServer();
+    this.loadData();
   },
+
   render: function() {
     return (
       React.createElement("div", {className: "aoe2hd-comprehensive-tech-tree"}, 
-        React.createElement(CivFilter, null), 
-        React.createElement(CivTable, {data: this.state.data})
+        React.createElement(CivTable, {unitsAndTechs: this.state.unitsAndTechs, civilizations: this.state.civilizations})
       )
     );
   }
 });
 
 React.render(
-  React.createElement(AOE2HDTechTree, {url: "../data/civilizations.json"}),
+  React.createElement(AOE2HDTechTree, {unitsAndTechsUrl: "data/all_units_and_techs.json", civsUrl: "data/civilizations.json"}),
   document.getElementById('app')
 );

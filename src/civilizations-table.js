@@ -1,17 +1,36 @@
 var CivTable = React.createClass({
   render: function() {
-    var data = this.props.data;
+    var buildings = this.props.unitsAndTechs.buildings;
+    var tableHeader = "";
 
-    var civNodes = data.map(function (civ) {
-      return (
-        <CivilizationRow civ={civ} />
-      );
-    });
+    var civilizations = this.props.civilizations;
+    var civilizationNodes = "";
+
+    if (buildings) {
+      tableHeader = buildings.map(function (_building, _i) {
+        return (
+          <BuildingHeader building={_building} />
+        );
+      });
+    }
+
+    if (civilizations) {
+      civilizationNodes = civilizations.map(function (_civ) {
+        return (
+          <CivilizationRow civ={_civ} />
+        );
+      });
+    } 
+
+    console.log(civilizationNodes)
 
     return (
       <table className="civilizations">
-        {civNodes}
+        {tableHeader}
+
+          {civilizationNodes}
       </table>
     );
   }
 });
+
