@@ -18,13 +18,16 @@ var BuildingHeader = React.createClass({
     return (
       <thead>
         <tr>
+          <th></th>
           <th colSpan={unitAndTechCount}>{building.name}</th>
         </tr>
         <tr>
+          <th></th>
           <th colSpan={unitCount}>Units</th>
           <th colSpan={techCount}>Technologies</th>
         </tr>
         <tr>
+          <th>Civilization</th>
           {unitsAndTechsCells}
         </tr>
       </thead>
