@@ -1,4 +1,12 @@
 var CivilizationRow = React.createClass({
+  assessAvailability: function (_civ, _item) {
+    if (_civ.units_and_techs.indexOf(_item.id) >= 0) {
+      return <td className="available">Available</td>);
+    }
+
+    return <td className=unavailable>Unavailable</td>);
+  },
+
   render: function() {
     var civilization = this.props.civilization;
     var buildings = this.props.buildings;
@@ -9,19 +17,11 @@ var CivilizationRow = React.createClass({
 
     $.each(buildings, function (_index, _building) {
       _building.units.map(function (_unit) {
-        if (civilization.units_and_techs.indexOf(_unit.id) >= 0) {
-          unitsAndTechsCells.push(<td className={_unit.id}>Available</td>);
-        } else {
-          unitsAndTechsCells.push(<td className={_unit.id}>Unavailable</td>);
-        }
+        unitsAndTechsCells.push(this.assessAvailability(civilization, _unit));
       });
 
       _building.technologies.map(function (_technology) {
-        if (civilization.units_and_techs.indexOf(_technology.id) >= 0) {
-          unitsAndTechsCells.push(<td className={_technology.id}>Available</td>);
-        } else {
-          unitsAndTechsCells.push(<td className={_technology.id}>Unavailable</td>);
-        }
+        unitsAndTechsCells.push(this.assessAvailability(civilization, _technology));
       });
     });
 
