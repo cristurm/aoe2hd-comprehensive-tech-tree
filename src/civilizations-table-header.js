@@ -5,7 +5,6 @@ var CivilizationsTableHeader = React.createClass({
     var buildingSubHeader = [<th></th>];
     var unitsAndTechsCells = [<th>Civilization</th>];
 
-    debugger;
     $.each(buildings, function (_index, _building) {
       var unitCount = _building.units.length;
       var techCount = _building.technologies.length;
