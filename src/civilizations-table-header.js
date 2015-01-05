@@ -1,8 +1,8 @@
 var CivilizationsTableHeader = React.createClass({
   render: function() {
     var buildings = this.props.buildings;
-    var buildingName = [<th></th>];
-    var buildingSubHeader = [<th></th>];
+    var buildingName = [<th className="civilization-name"></th>];
+    var buildingSubHeader = [<th className="civilization-name"></th>];
     var unitsAndTechsCells = [<th>Civilization</th>];
 
     $.each(buildings, function (_index, _building) {

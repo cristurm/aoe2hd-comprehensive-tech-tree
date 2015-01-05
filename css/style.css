@@ -1,0 +1,25 @@
+th {
+  background: #000;
+  color: #fff;
+}
+
+th:empty {
+  background: none;
+}
+
+th, td {
+  padding: 0.5em;
+}
+
+.civilization-name {
+  text-align: right;
+  min-widht: 10%;
+}
+
+.available {
+  background: #99ffcc;
+}
+
+.unavailable {
+  background: #ffcc99;
+}
