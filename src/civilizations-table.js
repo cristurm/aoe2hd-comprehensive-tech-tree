@@ -1,4 +1,4 @@
-var CivTable = React.createClass({
+var CivilizationsTable = React.createClass({
   render: function() {
     var buildings = this.props.unitsAndTechs.buildings;
     var tableHeader = [];
@@ -7,9 +7,7 @@ var CivTable = React.createClass({
     var civilizationRows = [];
 
     if (buildings) {
-      buildings.map(function (_building, _i) {
-        tableHeader.push(<BuildingHeader building={_building} />);
-      });
+      tableHeader = <CivilizationsTableHeader buildings={buildings} />;
     }
 
     if (civilizations) {
@@ -20,9 +18,7 @@ var CivTable = React.createClass({
 
     return (
       <table className="civilizations">
-        <div clasName="wtf-yeah-i-know">
-          {tableHeader}
-        </div>
+        {tableHeader}
         <tbody>
           {civilizationRows}
         </tbody>

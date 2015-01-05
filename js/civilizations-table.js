@@ -1,4 +1,4 @@
-var CivTable = React.createClass({displayName: "CivTable",
+var CivilizationsTable = React.createClass({displayName: "CivilizationsTable",
   render: function() {
     var buildings = this.props.unitsAndTechs.buildings;
     var tableHeader = [];
@@ -7,9 +7,7 @@ var CivTable = React.createClass({displayName: "CivTable",
     var civilizationRows = [];
 
     if (buildings) {
-      buildings.map(function (_building, _i) {
-        tableHeader.push(React.createElement(BuildingHeader, {building: _building}));
-      });
+      tableHeader = React.createElement(CivilizationsTableHeader, {buildings: buildings});
     }
 
     if (civilizations) {
@@ -20,9 +18,7 @@ var CivTable = React.createClass({displayName: "CivTable",
 
     return (
       React.createElement("table", {className: "civilizations"}, 
-        React.createElement("div", {clasName: "wtf-yeah-i-know"}, 
-          tableHeader
-        ), 
+        tableHeader, 
         React.createElement("tbody", null, 
           civilizationRows
         )

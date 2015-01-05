@@ -39,7 +39,7 @@ var AOE2HDTechTree = React.createClass({
   render: function() {
     return (
       <div className="aoe2hd-comprehensive-tech-tree">
-        <CivTable unitsAndTechs={this.state.unitsAndTechs} civilizations={this.state.civilizations} />
+        <CivilizationsTable unitsAndTechs={this.state.unitsAndTechs} civilizations={this.state.civilizations} />
       </div>
     );
   }
