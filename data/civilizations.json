@@ -2,33 +2,28 @@
   {
     "id": "celts",
     "name": "Celts",
-    "units_and_techs": {
-      "arbalest": false,
-      "archer": true,
-      "cavalry_archer": true,
-      "crossbowman": true,
-      "elite_skirmisher": true,
-      "hand_cannoneer": false,
-      "heavy_cavalry_archer": true,
-      "parthian_tactics": false,
-      "skirmisher": true,
-      "thumb_ring": false
-    }
+    "units_and_techs": [
+      "archer",
+      "cavalry_archer",
+      "crossbowman",
+      "elite_skirmisher",
+      "heavy_cavalry_archer",
+      "skirmisher"
+    ]
   },
   {
     "id": "persians",
     "name": "Persians",
-    "units_and_techs": {
-      "arbalest": false,
-      "archer": true,
-      "cavalry_archer": true,
-      "crossbowman": true,
-      "elite_skirmisher": true,
-      "hand_cannoneer": true,
-      "heavy_cavalry_archer": true,
-      "parthian_tactics": true,
-      "skirmisher": true,
-      "thumb_ring": true
-    }
+    "units_and_techs": [
+      "archer",
+      "cavalry_archer",
+      "crossbowman",
+      "elite_skirmisher",
+      "hand_cannoneer",
+      "heavy_cavalry_archer",
+      "parthian_tactics",
+      "skirmisher",
+      "thumb_ring"
+    ]
   }
 ]
