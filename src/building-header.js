@@ -5,19 +5,15 @@ var BuildingHeader = React.createClass({
     var techCount = building.technologies.length;
     var unitAndTechCount = unitCount + techCount;
 
-    var unitsAndTechsRows = [] 
+    var unitsAndTechsCells = [];
 
-    unitsAndTechsRows.push(building.units.map(function (_unit) {
-      return (
-        <th className={_unit.id}>{_unit.name}</th>
-      )
-    }));
+    building.units.map(function (_unit) {
+      unitsAndTechsCells.push(<th className={_unit.id}>{_unit.name}</th>);
+    });
 
-     unitsAndTechsRows.push(building.technologies.map(function (_tech) {
-      return (
-        <th className={_tech.id}>{_tech.name}</th>
-      )
-    }));
+    building.technologies.map(function (_technology) {
+      unitsAndTechsCells.push(<th className={_technology.id}>{_technology.name}</th>);
+    });
 
     return (
       <thead>
@@ -29,7 +25,7 @@ var BuildingHeader = React.createClass({
           <th colSpan={techCount}>Technologies</th>
         </tr>
         <tr>
-          {unitsAndTechsRows}
+          {unitsAndTechsCells}
         </tr>
       </thead>
     );

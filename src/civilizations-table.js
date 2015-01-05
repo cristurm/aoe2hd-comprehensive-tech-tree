@@ -4,7 +4,7 @@ var CivTable = React.createClass({
     var tableHeader = "";
 
     var civilizations = this.props.civilizations;
-    var civilizationNodes = "";
+    var civilizationRows = "";
 
     if (buildings) {
       tableHeader = buildings.map(function (_building, _i) {
@@ -15,14 +15,12 @@ var CivTable = React.createClass({
     }
 
     if (civilizations) {
-      civilizationNodes = civilizations.map(function (_civ) {
+      civilizationRows = civilizations.map(function (_civilization) {
         return (
-          <CivilizationRow civ={_civ} />
+          <CivilizationRow civilization={_civilization} buildings={buildings} />
         );
       });
     } 
-
-    console.log(civilizationNodes)
 
     return (
       <table className="civilizations">
@@ -30,7 +28,7 @@ var CivTable = React.createClass({
           {tableHeader}
         </div>
         <tbody>
-          {civilizationNodes}
+          {civilizationRows}
         </tbody>
       </table>
     );
