@@ -2,7 +2,8 @@ var AOE2HDTechTree = React.createClass({
   getInitialState: function() {
     return {
       unitsAndTechs: {},
-      civilizations: []
+      civilizations: [],
+      civilizationFilter: "all"
     };
   },
 
@@ -36,10 +37,15 @@ var AOE2HDTechTree = React.createClass({
     this.loadData();
   },
 
+  handleUserInput: function (_civilizationId) {
+    this.setState({civilizationFilter: _civilizationId});
+  },
+
   render: function() {
     return (
       <div className="aoe2hd-comprehensive-tech-tree">
-        <CivilizationsTable unitsAndTechs={this.state.unitsAndTechs} civilizations={this.state.civilizations} />
+        <CivilizationFilter state={this.state} onUserInput={this.handleUserInput} />
+        <CivilizationsTable state={this.state} />
       </div>
     );
   }
