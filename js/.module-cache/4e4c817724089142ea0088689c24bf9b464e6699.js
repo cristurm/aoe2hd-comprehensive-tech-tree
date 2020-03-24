@@ -1,1 +1,0 @@
-civilization-table.js
